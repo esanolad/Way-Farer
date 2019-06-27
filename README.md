@@ -1,4 +1,3 @@
-FORMAT: 1A
 
 # Way-Farer
 
@@ -33,6 +32,7 @@ containing a email, password, first_name, last_name, etc.
             }
 
 + Response 201  (application/json)
+
             {
                 “status” : “success” ,
                 “data” : {
@@ -43,6 +43,7 @@ containing a email, password, first_name, last_name, etc.
             }
 
 + Response 401 (application/json)
+
             {
                 “status” : “error” ,
                 “error” : “relevant-error-message”
@@ -60,11 +61,14 @@ Login to way farer application
 + password(string)  : password for account
 
 + Request   (application/json)
+
             {
                 "email" : "email@example.com" ,
                 "password" : "123456" 
             }
+
 + Response  201 (application/json)
+
             {
                 “status” : “success” ,
                 “data” :    {
@@ -73,7 +77,9 @@ Login to way farer application
                                 “token” : "434ef543" ,
                             }
             }
+
 + Response 401 (application/json)
+
             {
                 “status” : “error” ,
                 “error” : “relevant-error-message”
@@ -92,6 +98,7 @@ post a trip
 + is_admin(boolean) : check if user is admin
 
 + Request   (application/json)
+
             {
                 “token” : "23ef901" ,
                 “user_id” : 123456 ,
@@ -99,6 +106,7 @@ post a trip
             }
 
 + Response  201 (application/json)
+
             {
                 “status” : “success” ,
                 “data” :    {
@@ -112,6 +120,7 @@ post a trip
             }
 
 + Response 401 (application/json)
+
             {
                 “status” : “error” ,
                 “error” : “relevant-error-message”
@@ -126,6 +135,7 @@ get all trips
 + is_admin(boolean) : check if user is admin
 
 + Request   (application/json)
+
             {
                 “token” : "23ef901" ,
                 “user_id” : 123456 ,
@@ -133,6 +143,7 @@ get all trips
             }
 
 + Response  201 (application/json)
+
             {
                 “status” : “success” ,
                 “data” :    [
@@ -164,6 +175,7 @@ get all trips
             }
 
 + Response 400 (application/json)
+
             {
                 “status” : “error” ,
                 “error” : “relevant-error-message”
